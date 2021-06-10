@@ -74,8 +74,6 @@ for i = 1:length(B_all)
     y_polygon = -smooth(B_per_smooth(:,1),smooth_param)'+1e-9*rand(1,length(B_per_smooth)); y_polygon = y_polygon(smooth_param+2:end-smooth_param);
     x = [x x_polygon];
     y = [y y_polygon];
-    size(holes)
-    size(B_all)
     
     xrand = 2*holes(i).PixelList(:,1)'/size(img,2)-1;
     yrand = -2*holes(i).PixelList(:,2)'/size(img,1)+1;
